@@ -80,10 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'inventory',
-        'USERNAME': 'root',
-        'HOST': 'localhost',
+        'USER': 'root',
+        'HOST': '127.0.0.1',
         'PORT': 3306,
-        'PASSWORD': '',  # Your Password
+        'PASSWORD': '123456789',  # Your Password
     }
 }
 

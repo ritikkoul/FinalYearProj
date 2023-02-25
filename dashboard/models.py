@@ -3,9 +3,12 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 CATEGORY = (
-    ('Stationary', 'Stationary'),
-    ('Electronics', 'Electronics'),
-    ('Food', 'Food'),
+    ('Medicine', 'Medicine'),
+    ('Clothes', 'Clothes'),
+    ('Food', 'Food'),('Water', 'Water'),
+    ('Electronic Devices', 'Electronic Devices'),
+    ('Equipments', 'Equipments'),
+
 )
 
 

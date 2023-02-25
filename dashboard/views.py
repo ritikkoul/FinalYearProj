@@ -75,7 +75,7 @@ def product_detail(request, pk):
 
 @login_required(login_url='user-login')
 @allowed_users(allowed_roles=['Admin'])
-def customers(request):
+def customer(request):
     customer = User.objects.filter(groups=2)
     customer_count = customer.count()
     product = Product.objects.all()
@@ -88,7 +88,7 @@ def customers(request):
         'product_count': product_count,
         'order_count': order_count,
     }
-    return render(request, 'dashboard/customers.html', context)
+    return render(request, 'dashboard/customer.html', context)
 
 
 @login_required(login_url='user-login')
@@ -100,15 +100,15 @@ def customer_detail(request, pk):
     product_count = product.count()
     order = Order.objects.all()
     order_count = order.count()
-    customers = User.objects.get(id=pk)
+    customer = User.objects.get(id=pk)
     context = {
-        'customers': customers,
+        'customer': customer,
         'customer_count': customer_count,
         'product_count': product_count,
         'order_count': order_count,
 
     }
-    return render(request, 'dashboard/customers_detail.html', context)
+    return render(request, 'dashboard/customer_detail.html', context)
 
 
 @login_required(login_url='user-login')
